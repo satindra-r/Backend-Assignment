@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" class="h-screen">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <script src="/js/login.js" defer></script>
+    <title>
+        login
+    </title>
+</head>
+<body class="bg-slate-900 h-screen font-mono">
+<div class="flex flex-col items-center h-screen">
+    <div class="flex flex-row bg-slate-800 w-full h-[10%] text-teal-500 items-center justify-end gap-16 px-32">
+        <a href="/signUp">Sign Up</a>
+    </div>
+    <div class="flex items-center justify-center w-full h-full">
+        <div class="flex flex-col items-center justify-center border-gray-500 border w-1/5 h-1/2 rounded-3xl">
+            <div class="flex items-center justify-center rounded-t-3xl w-full h-1/6 text-white text-2xl font-bold">
+                Login
+            </div>
+            <div class="flex flex-col items-center justify-around bg-slate-800 w-full h-5/6 rounded-b-3xl text-white">
+                <div class="flex flex-col items-center justify-center w-full h-1/5">
+                    <div class="flex w-2/3 h-1/2 px-2 items-center justify-start">
+                        <label for="Username">Username</label>
+                    </div>
+                    <input class="w-2/3 h-1/2 rounded-md px-2 text-black" id="Username" required>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full h-1/5">
+                    <div class="flex w-2/3 h-1/2 px-2 items-center justify-start">
+                        <label for="Password">Password</label>
+                    </div>
+                    <input type="password" class="w-2/3 h-1/2 rounded-md px-2 text-black" id="Password" required>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full h-1/5">
+                    <button class="w-2/3 h-2/3 border-gray-600 border rounded-md px-8 bg-slate-900" id="Submit">Submit
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

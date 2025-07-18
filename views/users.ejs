@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" class="h-screen">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+
+    <script src="/js/users.js" defer></script>
+    <title>
+        Users
+    </title>
+</head>
+<body class="bg-slate-900 h-screen font-mono">
+<div class="flex flex-col items-center justify-center h-screen text-white">
+    <div class="flex flex-row bg-slate-800 w-full h-[10vh] text-teal-500 items-center justify-end gap-16 px-32">
+        <a href="/items">Items</a>
+        <a href="/orders">Orders</a>
+        <a href="/users">Users</a>
+        <a id="logout" href="/login">Log Out</a>
+    </div>
+    <div class="flex flex-row items-center w-full h-[10vh] px-8">
+        <div class="flex flex-row w-full">
+            <label for="page">Page:</label>
+            <input id="page" type="number" value="<%= page %>" min="1" class="w-[5%] bg-slate-800 ps-2">
+        </div>
+    </div>
+    <div class="flex flex-col items-end w-full h-[80vh] overflow-y-scroll">
+        <% for( let i = 0;i < users.length;i++) { %>
+            <div class="flex flex-row justify-between w-full h-[10%] min-h-[10%] border-gray-600 border items-center px-8">
+                <div class="w-[10%]"><%= users[i]["UserName"] %></div>
+                <div>
+                    <div class="flex flex-row gap-4 w-[20%]">
+                        <input id="radio 1 <%= i %>" name="radio <%= i %>"
+                               data-UserId="<%= users[i]["UserId"] %>"
+                               type="radio" <%= (users[i]["Role"] === "User") ? "checked" : "" %>>
+                        <label for="radio 1 <%= i %>">User</label>
+                    </div>
+                    <div class="flex flex-row gap-4 w-[20%]">
+                        <input id="radio 2 <%= i %>" name="radio <%= i %>"
+                               data-UserId="<%= users[i]["UserId"] %>"
+                               type="radio" <%= (users[i]["Role"] === "Chef") ? "checked" : "" %>>
+                        <label for="radio 2 <%= i %>">Chef</label>
+                    </div>
+                    <div class="flex flex-row gap-4 w-[20%]">
+                        <input id="radio 3 <%= i %>" name="radio <%= i %>"
+                               data-UserId="<%= users[i]["UserId"] %>"
+                               type="radio" <%= (users[i]["Role"] === "Admin") ? "checked" : "" %>>
+                        <label for="radio 3 <%= i %>">Admin</label>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

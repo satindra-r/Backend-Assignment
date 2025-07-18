@@ -4,8 +4,9 @@ module.exports = {
 	verifyCreateOrder,
 	verifyPreparedDish,
 	verifyPaidOrder,
-	verifyGetOrders,
-	verifyGetDishes
+	verifyGetDishes,
+	verifySwapSections,
+	verifyUserRole
 }
 
 function verifyCreateUser(req, res, next) {
@@ -26,6 +27,12 @@ function verifyCreateUser(req, res, next) {
 		res.status(400).send("No Role provided");
 		return;
 	}
+
+	if (!(req.header("Role") === "User") && !(req.header("Role") === "Chef") && !(req.header("Role") === "Admin")) {
+		res.status(400).send("Invalid Role");
+		return;
+	}
+
 
 	if (!req.header("PhoneNo")) {
 		res.status(400).send("No PhoneNo");
@@ -55,13 +62,21 @@ function verifyUserLogin(req, res, next) {
 }
 
 function verifyCreateOrder(req, res, next) {
-	if (!req.body["Items"]) {
+	let empty = true;
+
+	for (let i in req.body["Items"]) {
+		if (req.body["Items"][i]["count"] > 0) {
+			empty = false;
+		}
+	}
+
+	if (empty) {
 		res.status(400).send("No Items provided");
 		return;
 	}
-	for (let i = 0; i < req.body["Items"].length; i++) {
-		if (!req.body["Items"][i]["Id"] || !req.body["Items"][i]["Count"] || !req.body["Items"][i]["splInstructions"]) {
-			res.status(400).send("Item Details Missing");
+	for (let i in req.body["Items"]) {
+		if (!req.body["Items"][i]["count"]) {
+			res.status(400).send("Item Count Missing");
 			return;
 		}
 	}
@@ -93,7 +108,23 @@ function verifyPaidOrder(req, res, next) {
 	next();
 }
 
-function verifyGetOrders(req, res, next) {
+function verifyUserRole(req, res, next) {
+	if (!req.header("UserId")) {
+		res.status(400).send("No UserId provided");
+		return;
+	}
+	if (!req.header("Role")) {
+		res.status(400).send("No Paid State provided");
+		return;
+	}
+	if (!(req.header("Role") === "User") && !(req.header("Role") === "Chef") && !(req.header("Role") === "Admin")) {
+		res.status(400).send("Invalid Role");
+		return;
+	}
+	next();
+}
+
+/*function verifyGetOrders(req, res, next) {
 	if (!req.header("StartIndex")) {
 		res.status(400).send("No StartIndex provided");
 	}
@@ -101,11 +132,24 @@ function verifyGetOrders(req, res, next) {
 		res.status(400).send("No Count provided");
 	}
 	next();
-}
+}*/
 
 function verifyGetDishes(req, res, next) {
 	if (!req.header("OrderId")) {
 		res.status(400).send("No OrderId provided");
+		return;
+	}
+	next();
+}
+
+function verifySwapSections(req, res, next) {
+	if (!req.header("SectionId1")) {
+		res.status(400).send("No SectionId provided");
+		return;
+	}
+	if (!req.header("SectionId2")) {
+		res.status(400).send("No SectionId2 provided");
+		return;
 	}
 	next();
 }

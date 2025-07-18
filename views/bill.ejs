@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" class="h-screen">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/bill.js" defer></script>
+    <title>
+        Bill
+    </title>
+</head>
+<body class="bg-slate-900 h-screen font-mono">
+<div class="flex flex-col items-center gap-[10vh] overflow-y-auto">
+    <div class="flex flex-row bg-slate-800 w-full h-[10vh] text-teal-500 items-center justify-end gap-16 px-32">
+        <a href="/items">Items</a>
+        <a href="/orders">Orders</a>
+        <a id="logout" href="/login">Log Out</a>
+    </div>
+    <div class="flex flex-col items-center justify-center border-gray-500 border w-[50%] ">
+        <div class="flex items-center justify-center rounded-t-3xl w-full h-[7vh] text-white text-2xl font-bold">
+            Order No: <%= order["OrderId"] %>
+        </div>
+        <div class="flex flex-col items-center bg-slate-800 w-full text-white">
+            <div class="flex flex-row justify-between w-full h-[7vh] border-gray-600 border px-2">
+                <div class="w-[20%]">
+                    Item
+                </div>
+                <div class="w-[10%] text-right">
+                    Price
+                </div>
+                <div class="w-[10%] text-right">
+                    Count
+                </div>
+                <div class="w-[10%] text-right">
+                    Cost
+                </div>
+            </div>
+            <% for(let i = 0;i < dishes.length;i++){ %>
+                <% for(let j = 0;j < items.length;j++){ %>
+                    <% if(dishes[i]["ItemId"] === items[j]["ItemId"]){ %>
+                        <div class="flex flex-row items-center justify-between w-full h-[7vh] border-gray-600 border px-2">
+                            <div class="w-[20%]">
+                                <%= items[j]["ItemName"] %>
+                            </div>
+                            <div class="w-[10%] text-right">
+                                ₹<%= items[j]["Price"] %>
+                            </div>
+                            <div class="w-[10%] text-right">
+                                <%= dishes[i]["DishCount"] %>
+                            </div>
+                            <div class="w-[10%] text-right">
+                                ₹<%= dishes[i]["DishCount"] * items[j]["Price"] %>
+                            </div>
+                        </div>
+                    <% } %>
+                <% } %>
+            <% } %>
+            <div class="flex flex-row items-center justify-between w-full h-[7vh] border-gray-600 border px-2">
+                <div class="w-[10%]">
+                    Total
+                </div>
+                <div class="w-[20%]">
+                </div>
+                <div class="w-[10%] text-right">
+                    ₹<%= order["Price"] %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="h-[10vh]"></div>
+
+</div>
+</body>
+</html>

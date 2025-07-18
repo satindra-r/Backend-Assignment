@@ -1,0 +1,2684 @@
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: "Noto Sans Mono", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-1\/3 {
+  height: 33.333333%;
+}
+
+.h-1\/4 {
+  height: 25%;
+}
+
+.h-1\/5 {
+  height: 20%;
+}
+
+.h-1\/6 {
+  height: 16.666667%;
+}
+
+.h-2\/3 {
+  height: 66.666667%;
+}
+
+.h-3\/4 {
+  height: 75%;
+}
+
+.h-5\/6 {
+  height: 83.333333%;
+}
+
+.h-\[10\%\] {
+  height: 10%;
+}
+
+.h-\[10vh\] {
+  height: 10vh;
+}
+
+.h-\[2vh\] {
+  height: 2vh;
+}
+
+.h-\[70\%\] {
+  height: 70%;
+}
+
+.h-\[7vh\] {
+  height: 7vh;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-\[90\%\] {
+  height: 90%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.min-h-\[10\%\] {
+  min-height: 10%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[20\%\] {
+  width: 20%;
+}
+
+.w-\[2vh\] {
+  width: 2vh;
+}
+
+.w-\[5\%\] {
+  width: 5%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.resize-none {
+  resize: none;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-\[10vh\] {
+  gap: 10vh;
+}
+
+.gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-b-3xl {
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.rounded-t-3xl {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[hsl\(0\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(1\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(1 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(10\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(10 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(100\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(100 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(101\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(101 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(102\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(102 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(103\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(103 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(104\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(104 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(105\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(105 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(106\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(106 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(107\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(107 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(108\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(108 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(109\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(109 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(11\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(11 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(110\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(110 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(111\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(111 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(112\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(112 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(113\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(113 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(114\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(114 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(115\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(115 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(116\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(116 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(117\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(117 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(118\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(118 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(119\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(119 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(12\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(12 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(120\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(120 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(121\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(121 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(122\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(122 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(123\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(123 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(124\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(124 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(125\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(125 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(126\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(126 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(127\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(127 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(128\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(128 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(129\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(129 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(13\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(13 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(130\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(130 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(131\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(131 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(132\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(132 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(133\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(133 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(134\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(134 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(135\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(135 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(136\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(136 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(137\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(137 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(138\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(138 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(139\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(139 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(14\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(14 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(140\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(140 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(141\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(141 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(142\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(142 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(143\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(143 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(144\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(144 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(145\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(145 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(146\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(146 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(147\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(147 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(148\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(148 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(149\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(149 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(15\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(15 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(150\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(150 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(151\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(151 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(152\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(152 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(153\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(153 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(154\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(154 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(155\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(155 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(156\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(156 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(157\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(157 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(158\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(158 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(159\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(159 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(16\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(16 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(160\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(160 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(161\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(161 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(162\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(162 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(163\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(163 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(164\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(164 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(165\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(165 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(166\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(166 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(167\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(167 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(168\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(168 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(169\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(169 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(17\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(17 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(170\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(170 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(171\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(171 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(172\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(172 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(173\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(173 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(174\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(174 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(175\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(175 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(176\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(176 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(177\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(177 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(178\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(178 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(179\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(179 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(18\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(18 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(180\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(180 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(181\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(181 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(182\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(182 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(183\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(183 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(184\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(184 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(185\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(185 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(186\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(186 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(187\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(187 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(188\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(188 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(189\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(189 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(19\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(19 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(190\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(190 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(191\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(191 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(192\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(192 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(193\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(193 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(194\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(194 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(195\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(195 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(196\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(196 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(197\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(197 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(198\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(198 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(199\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(199 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(2\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(2 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(20\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(20 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(200\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(200 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(201\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(201 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(202\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(202 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(203\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(203 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(204\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(204 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(205\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(205 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(206\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(206 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(207\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(207 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(208\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(208 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(209\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(209 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(21\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(21 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(210\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(210 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(211\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(211 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(212\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(212 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(213\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(213 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(214\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(214 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(215\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(215 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(216\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(216 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(217\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(217 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(218\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(218 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(219\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(219 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(22\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(22 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(220\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(220 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(221\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(221 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(222\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(222 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(223\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(223 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(224\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(224 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(225\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(225 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(226\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(226 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(227\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(227 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(228\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(228 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(229\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(229 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(23\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(23 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(230\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(230 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(231\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(231 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(232\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(232 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(233\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(233 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(234\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(234 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(235\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(235 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(236\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(236 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(237\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(237 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(238\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(238 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(239\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(239 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(24\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(24 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(240\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(241\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(241 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(242\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(242 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(243\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(243 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(244\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(244 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(245\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(245 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(246\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(246 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(247\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(247 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(248\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(248 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(249\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(249 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(25\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(25 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(250\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(250 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(251\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(251 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(252\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(252 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(253\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(253 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(254\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(254 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(255\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(255 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(256\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(256 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(257\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(257 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(258\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(258 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(259\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(259 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(26\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(26 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(260\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(260 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(261\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(261 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(262\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(262 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(263\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(263 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(264\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(264 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(265\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(265 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(266\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(266 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(267\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(267 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(268\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(268 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(269\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(269 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(27\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(27 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(270\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(270 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(271\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(271 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(272\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(272 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(273\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(273 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(274\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(274 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(275\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(275 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(276\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(276 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(277\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(277 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(278\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(278 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(279\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(279 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(28\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(28 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(280\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(280 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(281\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(281 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(282\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(282 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(283\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(283 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(284\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(284 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(285\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(285 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(286\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(286 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(287\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(287 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(288\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(288 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(289\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(289 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(29\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(29 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(290\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(290 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(291\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(291 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(292\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(292 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(293\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(293 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(294\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(294 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(295\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(295 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(296\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(296 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(297\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(297 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(298\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(298 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(299\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(299 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(3\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(3 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(30\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(30 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(300\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(300 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(301\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(301 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(302\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(302 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(303\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(303 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(304\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(304 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(305\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(305 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(306\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(306 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(307\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(307 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(308\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(308 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(309\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(309 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(31\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(31 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(310\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(310 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(311\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(311 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(312\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(312 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(313\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(313 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(314\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(314 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(315\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(315 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(316\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(316 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(317\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(317 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(318\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(318 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(319\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(319 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(32\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(32 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(320\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(320 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(321\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(321 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(322\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(322 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(323\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(323 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(324\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(324 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(325\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(325 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(326\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(326 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(327\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(327 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(328\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(328 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(329\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(329 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(33\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(33 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(330\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(330 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(331\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(331 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(332\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(332 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(333\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(333 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(334\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(334 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(335\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(335 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(336\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(336 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(337\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(337 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(338\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(338 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(339\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(339 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(34\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(34 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(340\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(340 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(341\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(341 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(342\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(342 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(343\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(343 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(344\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(344 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(345\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(345 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(346\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(346 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(347\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(347 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(348\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(348 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(349\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(349 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(35\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(35 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(350\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(350 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(351\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(351 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(352\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(352 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(353\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(353 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(354\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(354 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(355\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(355 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(356\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(356 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(357\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(357 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(358\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(358 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(359\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(359 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(36\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(36 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(37\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(37 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(38\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(38 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(39\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(39 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(4\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(4 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(40\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(40 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(41\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(41 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(42\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(42 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(43\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(43 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(44\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(44 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(45\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(45 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(46\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(46 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(47\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(47 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(48\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(48 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(49\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(49 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(5\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(5 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(50\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(50 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(51\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(51 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(52\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(52 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(53\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(53 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(54\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(54 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(55\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(55 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(56\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(56 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(57\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(57 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(58\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(58 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(59\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(59 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(6\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(6 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(60\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(60 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(61\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(61 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(62\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(62 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(63\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(63 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(64\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(64 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(65\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(65 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(66\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(66 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(67\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(67 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(68\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(68 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(69\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(69 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(7\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(7 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(70\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(70 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(71\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(71 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(72\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(72 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(73\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(73 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(74\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(74 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(75\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(75 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(76\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(76 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(77\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(77 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(78\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(78 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(79\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(79 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(8\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(8 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(80\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(80 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(81\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(81 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(82\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(82 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(83\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(83 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(84\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(84 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(85\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(85 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(86\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(86 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(87\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(87 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(88\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(88 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(89\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(89 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(9\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(9 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(90\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(90 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(91\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(91 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(92\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(92 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(93\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(93 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(94\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(94 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(95\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(95 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(96\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(96 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(97\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(97 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(98\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(98 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[hsl\(99\2c 50\%\2c 75\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(99 50% 75% / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity, 1));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.ps-2 {
+  padding-inline-start: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.font-mono {
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.text-teal-500 {
+  --tw-text-opacity: 1;
+  color: rgb(20 184 166 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.disabled\:bg-gray-800:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.disabled\:text-gray-400:disabled {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}

@@ -13,7 +13,6 @@ function genSalt() {
 }
 
 function hash256(password, salt) {
-	let t = Date.now();
 	const pepper = Buffer.from(process.env.PEPPER, "hex");
 	let hashes = []
 	let hash = Buffer.from(password);
@@ -67,7 +66,6 @@ function hash256(password, salt) {
 			hash[j] += hashes[i][j];
 		}
 	}
-	console.log(Date.now() - t);
 	return Buffer.concat([hash, salt]).toString("hex").toUpperCase();
 }
 

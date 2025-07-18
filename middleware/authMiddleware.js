@@ -32,38 +32,43 @@ function checkUserCredentials(req, res) {
 
 function verifyUser(req, res, next) {
 	try {
-		let cookies = req.header("Cookies");
-		if (!cookies || !cookies.startsWith("JWT=")) {
-			res.status(401).send("JWT not found");
+		let cookie = ""
+		for (let i = 0; i < req.rawHeaders.length; i++) {
+			if (req.rawHeaders[i] === "Cookie") {
+				cookie = req.rawHeaders[i + 1];
+			}
+		}
+		let JWT = (cookie.split("JWT=")[1]).split(";")[0];
+		if (!JWT) {
+			res.redirect(302, "/login");
 			return
 		}
-		let JWT = cookies.split('=')[1];
 		let JWTInfo = Auth.decode(JWT);
-		if (JWTInfo["iat"] <= (Date.now() / 1000) + (24 * 60 * 60)) {
-			res.status(401).send("JWT expired");
+		if (JWTInfo["iat"] > (Date.now() / 1000) + (24 * 60 * 60)) {
+			res.redirect(302, "/login");
 			return;
 		} else {
 			req.UserId = JWTInfo["UserId"];
 		}
 	} catch (err) {
-		res.status(401).send("Invalid JWT");
+		res.redirect(302, "/login");
 		return;
 	}
 	next();
 }
 
 function verifyChef(req, res, next) {
-	if (req.User["role"] === "Chef" || req.User["role"] === "Admin") {
+	if (req.User["Role"] === "Chef" || req.User["Role"] === "Admin") {
+		next();
+	} else {
 		res.status(400).send("You do not have the permission to do this");
-		return;
 	}
-	next();
 }
 
 function verifyAdmin(req, res, next) {
-	if (req.User["role"] === "Admin") {
+	if (req.User["Role"] === "Admin") {
+		next();
+	} else {
 		res.status(400).send("You do not have the permission to do this");
-		return;
 	}
-	next();
 }

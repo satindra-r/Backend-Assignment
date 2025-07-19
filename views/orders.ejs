@@ -45,7 +45,7 @@
                     <label for="progress <%= i %>"><%= Math.round(prepared * 100 / total) %>%
                     </label>
                 </div>
-                <div class="w-[5%] text-center">
+                <div class="w-[10%] text-center">
                     <% if(orders[i]["Paid"]){ %>
                         <button id="pay <%= i %>" data-OrderId="<%= orders[i]["OrderId"] %>"
                                 class="w-full border-gray-500 border-2  rounded-full"><%= "View Bill" %></button>

@@ -23,7 +23,7 @@ for (let i = 0; i < dropdowns.length; i++) {
 	dropdowns[i].addEventListener("click", function (e) {
 		let toggleElements = document.getElementsByClassName("hidden-" + i);
 		for (let j = 0; j < toggleElements.length; j++) {
-			toggleElements[j].classList.toggle("hidden-class");
+			toggleElements[j].classList.toggle("hidden");
 		}
 		if (e.target.innerText === "v") {
 			e.target.innerText = ">";

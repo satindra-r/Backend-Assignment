@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/dropdown.css">
 
     <script src="/js/orders.js" defer></script>
     <title>
@@ -64,7 +63,7 @@
                 <% if(dishes[j]["OrderId"] === orders[i]["OrderId"]){ %>
                     <% for (let k = 0;k < items.length;k++){ %>
                         <% if(items[k]["ItemId"] === dishes[j]["ItemId"]){ %>
-                            <div class="flex flex-row justify-between w-[90%] h-[10%] min-h-[10%] bg-slate-950 border-gray-600 border items-center px-8 hidden-<%= i %> hidden-class">
+                            <div class="flex flex-row justify-between w-[90%] h-[10%] min-h-[10%] bg-slate-950 border-gray-600 border items-center px-8 hidden-<%= i %> hidden">
                                 <div class="w-[20%]">
                                     <%= dishes[j]["DishCount"] %> x <%= items[k]["ItemName"] %>
                                 </div>

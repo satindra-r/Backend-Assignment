@@ -1,16 +1,4 @@
-# Set up Sql
-
+# run server
 ```
-mysql -u root -p < backup.sql
-
-```
-
-# Install Dependencies
-```
-npm i
-```
-
-# Run Server
-```
-node app.js
+docker compose up
 ```

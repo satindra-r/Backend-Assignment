@@ -27,7 +27,7 @@ const mysql = require("mysql2/promise");
 const user = process.env.DB_USERNAME;
 const passwd = process.env.DB_PASSWORD;
 const pool = mysql.createPool({
-	host: "localhost", user: user, password: passwd, database: "ChefDB",
+	host: "db", user: user, password: passwd, database: "ChefDB",
 })
 
 async function getNextUserID() {

@@ -1,18 +1,7 @@
-# Set up .env
-
-Example ".env" file:
-
-```
-DB_USERNAME=root
-DB_PASSWORD=1234
-PEPPER=456a124a118f9a788bcbebfae71c91442152b44ee94598c5b6dbe4f60a3492bc
-JWT_SECRET=qawghui[poy8756e4srdfcghyu7t65e4wsrdxcghyutr5esdxfcgyuitrde67883
-```
-
 # Set up Sql
 
 ```
-mysql -u [username] -p < backup.sql
+mysql -u root -p < backup.sql
 
 ```
 

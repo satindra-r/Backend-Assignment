@@ -13,50 +13,68 @@
     </title>
 </head>
 <body class="bg-slate-900 h-screen font-mono">
+<% let phiInv = (Math.sqrt(5) - 1) / 2 %>
+<input type="hidden" id="filters" data-filters="<%= filters %>">
 <div class="flex flex-col items-center justify-center h-screen text-white">
     <div class="flex flex-row bg-slate-800 w-full h-[10%] text-teal-500 items-center justify-end gap-16 px-32">
         <a href="/items">Items</a>
         <a href="/orders">Orders</a>
         <a id="logout" href="/login">Log Out</a>
     </div>
+
     <div class="flex flex-row items-center w-full h-[10%] px-8">
         <div class="flex flex-row w-full">
             <label for="page">Page:</label>
             <input id="page" type="number" value="<%= page %>" min="1" class="w-[5%] bg-slate-800 ps-2">
         </div>
     </div>
-    <div class="flex flex-col w-full h-[70%]">
-        <% let phiInv = (Math.sqrt(5) - 1) / 2 %>
-        <% for( let i = 0;i < items.length;i++) { %>
-            <div class="flex flex-row justify-between w-full h-[10%] border-gray-600 border items-center px-8">
-                <div class="w-[10%]">
-                    <%= items[i]["ItemName"] %>
+
+    <div class="flex flex-row w-full h-[70%]">
+        <div class="flex flex-col border w-[15%] h-full px-8 py-4">
+            <div class="flex flex-row items-center w-full h-[5vh] font-bold">
+                Filters
+            </div>
+            <% for(var i = 0;i < sections.length;i++){ %>
+                <div class="flex flex-row items-center justify-start gap-4 h-[5vh]">
+                    <input id="checkbox <%= i %>" type="checkbox" data-SectionId="<%= sections[i]["SectionId"] %>">
+                    <div class="w-[2vh] h-[2vh] rounded-full bg-[hsl(<%= Math.round(((1 + sections[i]["SectionId"]) * phiInv * 360) % 360) %>,50%,75%)]"></div>
+                    <label for="checkbox <%= i %>"><%= sections[i]["SectionName"] %></label>
                 </div>
-                <div class="flex flex-row items-center justify-start gap-2 w-[10%] h-full">
-                    <div class="w-[2vh] h-[2vh] rounded-full bg-[hsl(<%= Math.round(((1 + items[i]["SectionId"]) * phiInv * 360) % 360) %>,50%,75%)]"></div>
-                    <% for(let j = 0;j < sections.length;j++){ %>
-                        <% if(sections[j]["SectionId"] === items[i]["SectionId"]){ %>
-                            <%= sections[j]["SectionName"] %>
-                            <% break %>
+            <% } %>
+        </div>
+        <div class="flex flex-col w-[85%] h-full">
+            <% for( let i = 0;i < items.length;i++) { %>
+                <div class="flex flex-row justify-between w-full h-[10%] border-gray-600 border items-center px-8">
+                    <div class="w-[10%]">
+                        <%= items[i]["ItemName"] %>
+                    </div>
+                    <div class="flex flex-row items-center justify-start gap-2 w-[10%] h-full">
+                        <div class="w-[2vh] h-[2vh] rounded-full bg-[hsl(<%= Math.round(((1 + items[i]["SectionId"]) * phiInv * 360) % 360) %>,50%,75%)]"></div>
+                        <% for(let j = 0;j < sections.length;j++){ %>
+                            <% if(sections[j]["SectionId"] === items[i]["SectionId"]){ %>
+                                <%= sections[j]["SectionName"] %>
+                                <% break %>
+                            <% } %>
                         <% } %>
-                    <% } %>
-                </div>
-                <div class="text-right w-[5%]">
-                    ₹<%= items[i]["Price"] %>
-                </div>
-                <div class="flex flex-row items-center justify-between w-[20%]">
+                    </div>
+                    <div class="text-right w-[5%]">
+                        ₹<%= items[i]["Price"] %>
+                    </div>
+                    <div class="flex flex-row items-center justify-around w-[15%]">
                     <textarea id="instruction <%= i %>" data-ItemId="<%= items[i].ItemId %>"
                               placeholder="Spl Instructions" class="bg-slate-800 ps-2 resize-none h-full"></textarea>
-                </div>
+                    </div>
 
-                <div>
-                    <label for="counter <%= i %>">Count:</label>
-                    <input id="counter <%= i %>" data-ItemId="<%= items[i].ItemId %>" type="number" value="0"
-                           min="0" max="9" class="bg-slate-800 ps-2">
+                    <div>
+                        <label for="counter <%= i %>">Count:</label>
+                        <input id="counter <%= i %>" data-ItemId="<%= items[i].ItemId %>" type="number" value="0"
+                               min="0" max="9" class="bg-slate-800 ps-2">
+                    </div>
                 </div>
-            </div>
-        <% } %>
+            <% } %>
+        </div>
     </div>
+
     <div class="flex justify-end items-center bg-slate-800 w-full h-[10%] px-8">
         <button id="Order" class="w-[10%] h-1/2 bg-slate-900 border-gray-500 border-4 rounded-full">Order
         </button>

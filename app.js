@@ -19,85 +19,88 @@ app.set("view engine", "ejs");
 app.use(express.static("static"));
 
 app.get("/", AuthMid.verifyUser, async (req, res) => {
-	if (req.UserId) {
-		res.redirect(302, "/items");
-	}
+    if (req.UserId) {
+        res.redirect(302, "/items");
+    } else {
+        res.redirect(302, "/login");
+    }
 });
 
 app.get("/login", (req, res) => {
-	res.render("login");
+    res.render("login");
 });
 app.get("/signUp", (req, res) => {
-	res.render("signUp");
+    res.render("signUp");
 });
 
 app.get("/items", AuthMid.verifyUser, async (req, res) => {
-	if (req.UserId) {
-		let User = await DB.getUser(req.UserId);
-		if (User["Role"] === "Admin") {
-			let sections = await DB.getSections();
-			res.render("adminItems", {"sections": sections});
-		} else if (User["Role"] === "Chef") {
-			res.redirect(302, "/orders");
-		} else {
-			let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
-			let items = await DB.getItems(page);
-			let sections = await DB.getSections();
-			res.render("items", {"items": items, "sections": sections, "page": page});
-		}
-	} else {
-		res.redirect(302, "/login");
-	}
+    if (req.UserId) {
+        let User = await DB.getUser(req.UserId);
+        if (User["Role"] === "Admin") {
+            let sections = await DB.getSections();
+            res.render("adminItems", {"sections": sections});
+        } else if (User["Role"] === "Chef") {
+            res.redirect(302, "/orders");
+        } else {
+            let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
+            let filters = Math.max(0, parseInt(parseInt(req.query.filters) || "0"));
+            let items = await DB.getItems(page, filters);
+            let sections = await DB.getSections();
+            res.render("items", {"items": items, "sections": sections, "page": page, "filters": filters});
+        }
+    } else {
+        res.redirect(302, "/login");
+    }
 });
 
 app.get("/orders", AuthMid.verifyUser, async (req, res) => {
-	if (req.UserId) {
+    if (req.UserId) {
 
-		let User = await DB.getUser(req.UserId);
-		if (User["Role"] === "Admin") {
-			let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
-			let items = await DB.getAllItems();
-			let dishes = await DB.getDishes();
-			let orders = await DB.getAllOrders(page);
-			res.render("adminOrders", {"items": items, "dishes": dishes, "orders": orders, "page": page});
-		} else if (User["Role"] === "Chef") {
-			let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
-			let items = await DB.getAllItems();
-			let dishes = await DB.getDishes();
-			let orders = await DB.getAllOrders(page);
-			res.render("chefOrders", {"items": items, "dishes": dishes, "orders": orders, "page": page});
-		} else {
-			let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
-			let items = await DB.getAllItems();
-			let dishes = await DB.getDishes();
-			let orders = await DB.getUserOrders(req.UserId, page);
-			res.render("orders", {"items": items, "dishes": dishes, "orders": orders, "page": page});
-		}
-	} else {
-		res.redirect(302, "/login");
-	}
+        let User = await DB.getUser(req.UserId);
+        if (User["Role"] === "Admin") {
+            let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
+            let items = await DB.getAllItems();
+            let dishes = await DB.getDishes();
+            let orders = await DB.getAllOrders(page);
+            res.render("adminOrders", {"items": items, "dishes": dishes, "orders": orders, "page": page});
+        } else if (User["Role"] === "Chef") {
+            let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
+            let items = await DB.getAllItems();
+            let dishes = await DB.getDishes();
+            let orders = await DB.getAllOrders(page);
+            res.render("chefOrders", {"items": items, "dishes": dishes, "orders": orders, "page": page});
+        } else {
+            let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
+            let items = await DB.getAllItems();
+            let dishes = await DB.getDishes();
+            let orders = await DB.getUserOrders(req.UserId, page);
+            res.render("orders", {"items": items, "dishes": dishes, "orders": orders, "page": page});
+        }
+    } else {
+        res.redirect(302, "/login");
+    }
 });
 
 app.get("/bill", AuthMid.verifyUser, async (req, res) => {
-	if (req.UserId) {
-		let OrderId = Math.max(1, parseInt(parseInt(req.query.order) || "1"));
-		let order = await DB.getUserOrder(req.UserId, OrderId);
-		if (order) {
-			let dishes = await DB.getOrderDishes(OrderId);
-			let items = await DB.getAllItems();
-			res.render("bill", {"items": items, "dishes": dishes, "order": order});
-		} else {
-			res.redirect(403, "/orders");
-		}
-	} else {
-		res.redirect(302, "/login");
-	}
+    if (req.UserId) {
+        let OrderId = Math.max(1, parseInt(parseInt(req.query.order) || "1"));
+        let order = await DB.getUserOrder(req.UserId, OrderId);
+        if (order) {
+            let dishes = await DB.getOrderDishes(OrderId);
+            let items = await DB.getAllItems();
+            res.render("bill", {"items": items, "dishes": dishes, "order": order});
+        } else {
+            res.redirect(403, "/orders");
+        }
+    } else {
+        res.redirect(302, "/login");
+    }
 })
 
 app.get("/users", AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, async (req, res) => {
-	let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
-	let users = await DB.getUsers();
-	res.render("users", {"users": users, "page": page});
+    let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
+    let users = await DB.getUsers();
+    res.render("users", {"users": users, "page": page});
 })
 
 app.post("/api/User/", VerifMid.verifyCreateUser, AuthMid.hashCreateUser, DBMid.createUser);
@@ -119,8 +122,8 @@ app.put("/api/Order", VerifMid.verifyPaidOrder, AuthMid.verifyUser, DBMid.getUse
 
 app.put("/api/Sections", VerifMid.verifySwapSections, AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.swapSections);
 
-app.put("/api/User",VerifMid.verifyUserRole ,AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.setUserRole)
+app.put("/api/User", VerifMid.verifyUserRole, AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.setUserRole)
 
 app.listen(port, () => {
-	console.log("Server is running on port " + port);
+    console.log("Server is running on port " + port);
 })

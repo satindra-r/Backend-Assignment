@@ -1,5 +1,7 @@
 username = document.getElementById("Username");
 password = document.getElementById("Password");
+error=document.getElementById("Error");
+
 
 async function login() {
 	let res = await (await fetch("/api/User/login", {
@@ -12,6 +14,9 @@ async function login() {
 		date.setTime(Date.now() + (24 * 60 * 60 * 1000));
 		document.cookie = "JWT=" + JWT + ";" + "Expires=" + date.toUTCString() + ";SameSite=strict;Path=/";
 		window.location.href = "/items";
+	} else {
+		error.classList.remove("hidden");
+		error.innerText = await res.text()
 	}
 }
 

@@ -36,19 +36,19 @@
                     <div class="flex flex-row gap-4 w-[20%]">
                         <input id="radio 1 <%= i %>" name="radio <%= i %>"
                                data-UserId="<%= users[i]["UserId"] %>"
-                               type="radio" <%= (users[i]["Role"] === "User") ? "checked" : "" %>>
+                               type="radio" <%= (users[i]["Role"] === "User") ? "checked" : "" %> <%= (users[i]["UserId"] === adminUser) ? "disabled" : "" %> >
                         <label for="radio 1 <%= i %>">User</label>
                     </div>
                     <div class="flex flex-row gap-4 w-[20%]">
                         <input id="radio 2 <%= i %>" name="radio <%= i %>"
                                data-UserId="<%= users[i]["UserId"] %>"
-                               type="radio" <%= (users[i]["Role"] === "Chef") ? "checked" : "" %>>
+                               type="radio" <%= (users[i]["Role"] === "Chef") ? "checked" : "" %> <%= (users[i]["UserId"] === adminUser) ? "disabled" : "" %> >
                         <label for="radio 2 <%= i %>">Chef</label>
                     </div>
                     <div class="flex flex-row gap-4 w-[20%]">
                         <input id="radio 3 <%= i %>" name="radio <%= i %>"
                                data-UserId="<%= users[i]["UserId"] %>"
-                               type="radio" <%= (users[i]["Role"] === "Admin") ? "checked" : "" %>>
+                               type="radio" <%= (users[i]["Role"] === "Admin") ? "checked" : "" %> <%= (users[i]["UserId"] === adminUser) ? "disabled" : "" %> >
                         <label for="radio 3 <%= i %>">Admin</label>
                     </div>
                 </div>

@@ -15,7 +15,13 @@ DB = require('./db');
 
 async function createUser(req, res) {
 	try {
-		await DB.createUser(req.header("UserName"), req.header("Role"), req.header("PhoneNo"), req.header("Address"), req.hash);
+		let row =DB.getUserCredentials(req.header("UserName"));
+
+		if(row){
+			res.status(403).send("Username already taken");
+		}else{
+			await DB.createUser(req.header("UserName"), req.header("Role"), req.header("PhoneNo"), req.header("Address"), req.hash);
+		}
 		res.status(201).send("User created successfully.");
 	} catch (err) {
 		res.status(500).send("Database error");

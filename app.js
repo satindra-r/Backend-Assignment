@@ -37,8 +37,10 @@ app.get("/items", AuthMid.verifyUser, async (req, res) => {
     if (req.UserId) {
         let User = await DB.getUser(req.UserId);
         if (User["Role"] === "Admin") {
-            let sections = await DB.getSections();
-            res.render("adminItems", {"sections": sections});
+            let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
+            let items = await DB.getItems(page, 0);
+
+            res.render("adminItems", {"items": items, "page": page});
         } else if (User["Role"] === "Chef") {
             res.redirect(302, "/orders");
         } else {
@@ -52,6 +54,11 @@ app.get("/items", AuthMid.verifyUser, async (req, res) => {
         res.redirect(302, "/login");
     }
 });
+
+app.get("/sections", AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, async (req, res) => {
+    let sections = await DB.getSections();
+    res.render("adminItems", {"sections": sections});
+})
 
 app.get("/orders", AuthMid.verifyUser, async (req, res) => {
     if (req.UserId) {
@@ -100,7 +107,7 @@ app.get("/bill", AuthMid.verifyUser, async (req, res) => {
 app.get("/users", AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, async (req, res) => {
     let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
     let users = await DB.getUsers();
-    res.render("users", {"users": users, "page": page});
+    res.render("users", {"users": users, "page": page, "adminUser": req.UserId});
 })
 
 app.post("/api/User/", VerifMid.verifyCreateUser, AuthMid.hashCreateUser, DBMid.createUser);

@@ -38,9 +38,10 @@ app.get("/items", AuthMid.verifyUser, async (req, res) => {
         let User = await DB.getUser(req.UserId);
         if (User["Role"] === "Admin") {
             let page = Math.max(1, parseInt(parseInt(req.query.page) || "1"));
-            let items = await DB.getItems(page, 0);
-
-            res.render("adminItems", {"items": items, "page": page});
+            let filters = Math.max(0, parseInt(parseInt(req.query.filters) || "0"));
+            let items = await DB.getItems(page, filters);
+            let sections = await DB.getSections();
+            res.render("adminItems", {"items": items, "sections": sections, "page": page, "filters": filters});
         } else if (User["Role"] === "Chef") {
             res.redirect(302, "/orders");
         } else {
@@ -57,7 +58,7 @@ app.get("/items", AuthMid.verifyUser, async (req, res) => {
 
 app.get("/sections", AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, async (req, res) => {
     let sections = await DB.getSections();
-    res.render("adminItems", {"sections": sections});
+    res.render("adminSections", {"sections": sections});
 })
 
 app.get("/orders", AuthMid.verifyUser, async (req, res) => {
@@ -129,7 +130,11 @@ app.put("/api/Order", VerifMid.verifyPaidOrder, AuthMid.verifyUser, DBMid.getUse
 
 app.put("/api/Sections", VerifMid.verifySwapSections, AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.swapSections);
 
-app.put("/api/User", VerifMid.verifyUserRole, AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.setUserRole)
+app.put("/api/User", VerifMid.verifyUserRole, AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.setUserRole);
+
+app.post("/api/Item", VerifMid.verifyCreateItem, AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.createItem);
+
+app.put("/api/Item", VerifMid.verifyEditItem, AuthMid.verifyUser, DBMid.getUser, AuthMid.verifyAdmin, DBMid.editItem);
 
 app.listen(port, () => {
     console.log("Server is running on port " + port);

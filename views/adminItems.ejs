@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" class="h-screen">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/adminItems.js" defer></script>
+    <title>
+        Items
+    </title>
+</head>
+<body class="bg-slate-900 h-screen font-mono">
+<% let phiInv = (Math.sqrt(5) - 1) / 2 %>
+<input type="hidden" id="filters" data-filters="<%= filters %>">
+<div class="flex flex-col items-center justify-around h-screen text-white">
+    <div class="flex flex-row bg-slate-800 w-full h-[10%] text-teal-500 items-center justify-end gap-16 px-32">
+        <a href="/items">Items</a>
+        <a href="/sections">Sections</a>
+        <a href="/orders">Orders</a>
+        <a href="/users">Users</a>
+        <a id="logout" href="/login">Log Out</a>
+    </div>
+
+    <div class="flex flex-row items-center w-full h-[10%] px-8">
+        <div class="flex flex-row w-full">
+            <label for="page">Page:</label>
+            <input id="page" type="number" value="<%= page %>" min="1" class="w-[5%] bg-slate-800 ps-2">
+        </div>
+    </div>
+
+    <div class="flex flex-row w-full h-[70%]">
+        <div class="flex flex-col border w-[15%] h-full px-8 py-4">
+            <div class="flex flex-row items-center w-full h-[5vh] font-bold">
+                Filters
+            </div>
+            <% for(var i = 0;i < sections.length;i++){ %>
+                <div class="flex flex-row items-center justify-start gap-4 h-[5vh]">
+                    <input id="checkbox <%= i %>" type="checkbox" data-SectionId="<%= sections[i]["SectionId"] %>">
+                    <div class="w-[2vh] h-[2vh] rounded-full bg-[hsl(<%= Math.round(((1 + sections[i]["SectionId"]) * phiInv * 360) % 360) %>,50%,75%)]"></div>
+                    <label for="checkbox <%= i %>"><%= sections[i]["SectionName"] %></label>
+                </div>
+            <% } %>
+        </div>
+        <div class="flex flex-col w-[85%] h-full">
+
+            <div class="flex flex-row justify-between w-full h-[10%] border-gray-600 border items-center px-8">
+                <input id="itemName -1" class="w-[10%] bg-slate-800" placeholder="Item Name">
+
+                <div class="flex flex-row items-center justify-start gap-2 w-[10%] h-full">
+                    <select id="sectionId -1" class="w-full bg-slate-800">
+                        <% for(let j = 0;j < sections.length;j++){ %>
+                            <option value="<%= sections[j]["SectionId"] %>"><%= sections[j]["SectionName"] %></option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="flex flex-row justify-around text-right w-[5%]">
+                    ₹<input id="price -1" class="text-right w-full bg-slate-800" placeholder="Price">
+
+                </div>
+                <div class="w-[5%] text-center">
+                    <button id="edit -1" class="w-full border-gray-500 border-2  rounded-full">
+                        Add Item
+                    </button>
+                </div>
+            </div>
+
+            <% for( let i = 0;i < items.length;i++) { %>
+                <div class="flex flex-row justify-between w-full h-[10%] border-gray-600 border items-center px-8">
+                    <input id="itemName <%= i %>" class="w-[10%] bg-slate-800"
+                           placeholder="<%= items[i]["ItemName"] %>">
+
+                    <div class="flex flex-row items-center justify-start gap-2 w-[10%] h-full">
+                        <select id="sectionId <%= i %>" class="w-full bg-slate-800">
+                            <% for(let j = 0;j < sections.length;j++){ %>
+                                <% if(sections[j]["SectionId"] === items[i]["SectionId"]){ %>
+                                    <option value="<%= sections[j]["SectionId"] %>"
+                                            selected="selected"><%= sections[j]["SectionName"] %></option>
+                                <% }else{ %>
+                                    <option value="<%= sections[j]["SectionId"] %>"><%= sections[j]["SectionName"] %></option>
+                                <% } %>
+                            <% } %>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-row justify-around text-right w-[5%]">
+                        ₹<input id="price <%= i %>" class="text-right w-full bg-slate-800"
+                                placeholder="<%= items[i]["Price"] %>">
+
+                    </div>
+                    <div class="w-[5%] text-center">
+                        <button id="edit <%= i %>" data-Itemid="<%= items[i]["ItemId"] %>"
+                                class="w-full border-gray-500 border-2  rounded-full">
+                            Save Item
+                        </button>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="flex flex-row w-full h-[10%] items-center justify-end px-8 bg-slate-800">
+        <div id="Error" class="flex items-center justify-center bg-red-400 rounded-l w-[30%] h-[70%] hidden">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

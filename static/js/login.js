@@ -1,6 +1,6 @@
-username = document.getElementById("Username");
-password = document.getElementById("Password");
-error=document.getElementById("Error");
+let username = document.getElementById("Username");
+let password = document.getElementById("Password");
+let error=document.getElementById("Error");
 
 
 async function login() {

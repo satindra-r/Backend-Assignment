@@ -17,7 +17,9 @@ module.exports = {
     getAllItems,
     swapSections,
     getUsers,
-    setUserRole
+    setUserRole,
+    createItem,
+    editItem
 }
 
 const dotenv = require("dotenv");
@@ -175,6 +177,7 @@ async function getItems(page, filters) {
         }
         questionMarks += ")";
 
+
         return (await pool.query(`select *
                                   from Items
                                   where SectionId in ` + questionMarks + `
@@ -218,4 +221,42 @@ async function swapSections(sectionId1, sectionId2) {
 async function getUsers() {
     return (await pool.query(`select *
                               from Users`))[0];
+}
+
+async function getNextItemId() {
+    let rows = (await pool.query(`select max(ItemId)
+                                  from Items`))[0];
+    if (!rows[0]["max(ItemId)"]) {
+        return 1;
+    }
+    return rows[0]["max(ItemId)"] + 1;
+}
+
+async function createItem(ItemName, SectionId, Price) {
+    let ItemId = await getNextItemId();
+    console.log(ItemId, ItemName, SectionId, Price);
+    await pool.execute(`
+        insert into Items (ItemId, ItemName, SectionId, Price)
+        values (?, ?, ?, ?)
+    `, [ItemId, ItemName, SectionId, Price]);
+}
+
+async function editItem(ItemId, ItemName, SectionId, Price) {
+    if (ItemName) {
+        await pool.execute(`update Items
+                            set ItemName=?
+                            where ItemId = ?`, [ItemName, ItemId]);
+    }
+    if (SectionId) {
+        await pool.execute(`update Items
+                            set SectionId=?
+                            where ItemId = ?`, [SectionId, ItemId]);
+    }
+    if (Price) {
+        await pool.execute(`update Items
+                            set Price=?
+                            where ItemId = ?`, [Price, ItemId]);
+    }
+
+
 }

@@ -70,6 +70,7 @@ function verifyCreateOrder(req, res, next) {
         if (req.body["Items"][i]["count"] > 0) {
             empty = false;
         }
+        req.body["Items"][i]["splInstructions"] = req.body["Items"][i]["splInstructions"].trimStart().trimEnd();
     }
 
     if (empty) {
@@ -167,6 +168,10 @@ function verifyCreateItem(req, res, next) {
     }
     if (!req.header("Price")) {
         res.status(400).send("No Price provided");
+        return;
+    }
+    if (req.header("Price")<=0) {
+        res.status(400).send("Invalid Price provided");
         return;
     }
     next();
